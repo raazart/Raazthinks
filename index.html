@@ -9,19 +9,36 @@
 body{
   margin:0;
   font-family: Arial;
-  background:#0f0f0f;
+  background: #0f0f0f;
   color:white;
   text-align:center;
 }
 
+/* Main container */
 .container{
-  margin-top:100px;
+  margin-top:60px;
 }
 
-h1{
-  color:#00ffd5;
+/* Profile box */
+.profile-box{
+  margin:20px auto;
+  padding:20px;
+  width:85%;
+  max-width:350px;
+  background:#1a1a1a;
+  border-radius:12px;
+  box-shadow:0 0 15px rgba(0,255,213,0.2);
 }
 
+.profile{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  border:3px solid #00ffd5;
+}
+
+/* Buttons */
 .btn{
   display:inline-block;
   margin:10px;
@@ -29,31 +46,86 @@ h1{
   border-radius:8px;
   text-decoration:none;
   color:white;
+  font-weight:bold;
 }
 
 .insta{background:#ff2d55;}
 .telegram{background:#229ED9;}
+
+/* Boxes */
+.box{
+  margin:20px auto;
+  padding:20px;
+  width:85%;
+  max-width:350px;
+  background:#1a1a1a;
+  border-radius:12px;
+  box-shadow:0 0 15px rgba(0,255,213,0.2);
+}
+
+h2{
+  color:#00ffd5;
+}
+
+/* Input */
+input{
+  padding:10px;
+  width:80%;
+  border-radius:8px;
+  border:none;
+}
+
+button{
+  margin-top:10px;
+  padding:10px 15px;
+  border:none;
+  border-radius:8px;
+  background:#00ffd5;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+button:hover{
+  opacity:0.8;
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="container">
-<h1>Raaz Chaudhary</h1>
 
-<a class="btn insta" href="https://instagram.com/raxz_.x" target="_blank">Instagram</a>
+  <h1>Raaz Chaudhary</h1>
 
-<a class="btn telegram" href="https://t.me/jaanuedittz" target="_blank">Telegram</a>
-</div>
+  <!-- Buttons -->
+  <a class="btn insta" href="https://instagram.com/raxz_.x" target="_blank">Instagram</a>
+  <a class="btn telegram" href="https://t.me/jaanuedittz" target="_blank">Telegram</a>
 
-</body>
-  <div style="margin-top:40px;">
-  <h2>Ask Prompt</h2>
+  <!-- Profile -->
+  <div class="profile-box">
+    <img src="profile.jpg" class="profile">
+    <h3>Editz Creator ✨</h3>
+  </div>
 
-  <input id="txt" placeholder="Type here..." style="padding:10px; border-radius:8px;">
-  <button onclick="go()" style="padding:10px;">Send</button>
+  <!-- Prompt Box -->
+  <div class="box">
+    <h2>Prompt</h2>
+    <input id="txt" placeholder="Type here...">
+    <br>
+    <button onclick="go()">Send</button>
+    <p id="out"></p>
+  </div>
 
-  <p id="out"></p>
+  <!-- Thoughts / Poetry -->
+  <div class="box">
+    <h2>Thoughts ✨</h2>
+    <p>
+      Jo likh nahi pata main lafzon me,<br>
+      wo dil shayari ban ke nikal jata hai...
+    </p>
+  </div>
+
 </div>
 
 <script>
@@ -62,5 +134,6 @@ function go(){
   document.getElementById("out").innerText = t;
 }
 </script>
+
 </body>
 </html>
