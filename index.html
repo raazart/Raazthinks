@@ -96,7 +96,7 @@ button:hover{
 
 <div class="container">
 
-  <h1>Raaz Chaudhary</h1>
+  <h1>Raazthinks</h1>
 
   <!-- Buttons -->
   <a class="btn insta" href="https://instagram.com/raxz_.x" target="_blank">Instagram</a>
@@ -109,6 +109,27 @@ button:hover{
   </div>
 
   <!-- Prompt Box -->
+  <div class="box">
+  <h2>Photo Prompt</h2>
+
+  <input id="photoText" placeholder="Describe your image...">
+
+  <button onclick="generateImage()">Generate</button>
+
+  <p id="result"></p>
+</div>
+
+<script>
+function generateImage(){
+  let text = document.getElementById("photoText").value;
+
+  if(text.trim() === ""){
+    document.getElementById("result").innerText = "Please write prompt 😌";
+  } else {
+    document.getElementById("result").innerText = "Generating: " + text;
+  }
+}
+</script>
   h2>Prompt</h2>
     <input id="txt" placeholder="Type here...">
     <br>
