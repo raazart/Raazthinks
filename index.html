@@ -1,104 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Raaz Chaudhary</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raaz Chaudhary</title>
 
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
-      color: white;
-      text-align: center;
-    }
+<style>
+body{
+  margin:0;
+  font-family: Arial;
+  background:#0f0f0f;
+  color:white;
+  text-align:center;
+}
 
-    .container{
-      margin-top: 100px;
-      animation: fadeIn 1.2s ease-in-out;
-    }
+.container{
+  margin-top:100px;
+}
 
-    .profile{
-      width:120px;
-      height:120px;
-      border-radius:50%;
-      background: #222;
-      margin: auto;
-      border: 3px solid #00ffd5;
-      box-shadow: 0 0 20px #00ffd5;
-    }
+h1{
+  color:#00ffd5;
+}
 
-    h1{
-      font-size: 38px;
-      margin-top: 15px;
-      color: #00ffd5;
-    }
+.btn{
+  display:inline-block;
+  margin:10px;
+  padding:12px 20px;
+  border-radius:8px;
+  text-decoration:none;
+  color:white;
+}
 
-    p{
-      color:#ccc;
-      font-size:16px;
-    }
-
-    .btn{
-      display:inline-block;
-      margin:10px;
-      padding:12px 25px;
-      border-radius:8px;
-      text-decoration:none;
-      color:white;
-      font-weight:bold;
-      transition: 0.3s;
-    }
-
-    .insta{
-      background:#ff2d55;
-      box-shadow: 0 0 15px #ff2d55;
-    }
-
-    .telegram{
-      background:#229ED9;
-      box-shadow: 0 0 15px #229ED9;
-    }
-
-    .btn:hover{
-      transform: scale(1.1);
-      opacity: 0.9;
-    }
-
-    @keyframes fadeIn{
-      from{opacity:0; transform: translateY(30px);}
-      to{opacity:1; transform: translateY(0);}
-    }
-
-    footer{
-      margin-top:40px;
-      color:#666;
-      font-size:12px;
-    }
-  </style>
+.insta{background:#ff2d55;}
+.telegram{background:#229ED9;}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
+<div class="container">
+<h1>Raaz Chaudhary</h1>
 
-    <div class="profile"></div>
+<a class="btn insta" href="https://instagram.com/raxz_.x" target="_blank">Instagram</a>
 
-    <h1>Raaz Chaudhary</h1>
-    <p>Welcome to my digital world ✨</p>
+<a class="btn telegram" href="https://t.me/jaanuedittz" target="_blank">Telegram</a>
+</div>
 
-    <a class="btn insta" href="https://instagram.com/raxz_.x" target="_blank">
-      Instagram
-    </a>
+</body>
+  <div style="margin-top:40px;">
+  <h2>Ask Prompt</h2>
 
-    <a class="btn telegram" href="https://t.me/jaanuedittz" target="_blank">
-      Telegram
-    </a>
+  <input id="txt" placeholder="Type here..." style="padding:10px; border-radius:8px;">
+  <button onclick="go()" style="padding:10px;">Send</button>
 
-    <footer>© 2026 All Rights Reserved</footer>
+  <p id="out"></p>
+</div>
 
-  </div>
-
+<script>
+function go(){
+  let t = document.getElementById("txt").value;
+  document.getElementById("out").innerText = t;
+}
+</script>
 </body>
 </html>
